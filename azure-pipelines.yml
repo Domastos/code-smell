@@ -3,14 +3,14 @@
   inputs:
     SonarCloud: 'Code_smell'
     organization: 'my-org123'
-    scannerMode: 'Other'
-- task: SonarQubeAnalyze@4
+    scannerMode: 'MSBuild'
+    projectKey: 'Code_smell'
+    projectName: 'Code_smell'
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- task: SonarCloudAnalyze@1
 - master
 
 pool:
